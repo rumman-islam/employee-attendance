@@ -198,6 +198,135 @@
             border-radius: 0 10px 10px 0;
             margin: 20px 0;
         }
+        .action-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .print-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+            transition: all 0.3s ease;
+        }
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+        }
+        .print-btn:active {
+            transform: translateY(1px);
+        }
+        .btn-icon {
+            transition: transform 0.3s ease;
+        }
+        .print-btn:hover .btn-icon {
+            transform: scale(1.1);
+        }
+        @media print {
+            @page {
+                margin: 0;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+                padding: 2cm !important;
+            }
+            .container {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            main {
+                padding: 20px 0 !important;
+            }
+            header {
+                background: white !important;
+                color: black !important;
+                border-bottom: 2px solid #333;
+                padding: 20px 0 !important;
+            }
+            header h1 {
+                color: black !important;
+            }
+            header .subtitle {
+                color: #555 !important;
+            }
+            header .student-info {
+                background: #f8f9fa !important;
+                color: black !important;
+                border: 1px solid #ddd;
+                box-shadow: none !important;
+            }
+            h2 {
+                color: black !important;
+                border-bottom-color: black !important;
+                page-break-after: avoid;
+            }
+            .info-card {
+                background: white !important;
+                border: 1px solid #ddd !important;
+                border-left: 5px solid #2a5298 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+            .tech-box {
+                background: white !important;
+                color: black !important;
+                border: 1px solid #ddd !important;
+                page-break-inside: avoid;
+            }
+            .tech-box h3 {
+                color: black !important;
+            }
+            .problem-statement, .solution-box {
+                background: white !important;
+                color: black !important;
+                border: 1px solid #ddd !important;
+                border-left: 5px solid !important;
+                page-break-inside: avoid;
+            }
+            .problem-statement {
+                border-left-color: #dc3545 !important;
+            }
+            .solution-box {
+                border-left-color: #28a745 !important;
+            }
+            table {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+                page-break-inside: avoid;
+            }
+            th {
+                background: #f2f2f2 !important;
+                color: black !important;
+                border-bottom: 2px solid #ddd !important;
+            }
+            td {
+                border-bottom: 1px solid #ddd !important;
+            }
+            footer {
+                background: white !important;
+                color: black !important;
+                border-top: 1px solid #ddd;
+                padding: 20px 0 !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -207,6 +336,7 @@
             <p class="subtitle">Employee Attendance Management System</p>
             <div class="student-info">
                 <p><strong>Name:</strong> Rumman Khatun</p>
+                <p><strong>Roll:</strong> 12230120496</p>
                 <p><strong>Subject:</strong> Software Development III</p>
                 <p><strong>Subject Code:</strong> CSE 4104</p>
                 <p><strong>Department:</strong> ECSE</p>
@@ -561,10 +691,17 @@
                     The system is designed with scalability, security, and maintainability in mind, making it suitable for both academic demonstration and real-world organizational use. The inclusion of role-based access, real-time dashboards, and comprehensive reporting makes it a valuable tool for HR departments and organizational management.
                 </p>
             </section>
+            
+            <div class="action-container no-print">
+                <button onclick="window.print()" class="print-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    Print / Save as PDF
+                </button>
+            </div>
         </main>
 
         <footer>
-            <p>© 2026 | Prepared by: <strong>Rumman Khatun</strong> | Department of ECSE, Section 7P</p>
+            <p>© 2026 | Prepared by: <strong>Rumman Khatun (Roll: 12230120496)</strong> | Department of ECSE, Section 7P</p>
             <p style="margin-top: 5px; font-size: 0.9em; opacity: 0.8;">Software Development III (CSE 4104) — Project Proposal</p>
         </footer>
     </div>
