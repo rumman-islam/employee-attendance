@@ -235,12 +235,14 @@
         }
         @media print {
             @page {
-                margin: 0;
+                size: A4;
+                margin: 20mm 15mm 20mm 15mm;
             }
             body {
                 background: white !important;
                 color: black !important;
-                padding: 2cm !important;
+                padding: 0 !important;
+                margin: 0 !important;
             }
             .container {
                 box-shadow: none !important;
@@ -253,13 +255,19 @@
                 display: none !important;
             }
             main {
-                padding: 20px 0 !important;
+                padding: 10px 0 !important;
+            }
+            section {
+                page-break-inside: avoid;
+                break-inside: avoid;
             }
             header {
                 background: white !important;
                 color: black !important;
                 border-bottom: 2px solid #333;
                 padding: 20px 0 !important;
+                page-break-inside: avoid;
+                break-inside: avoid;
             }
             header h1 {
                 color: black !important;
@@ -273,10 +281,11 @@
                 border: 1px solid #ddd;
                 box-shadow: none !important;
             }
-            h2 {
+            h2, h3 {
                 color: black !important;
                 border-bottom-color: black !important;
                 page-break-after: avoid;
+                break-after: avoid;
             }
             .info-card {
                 background: white !important;
@@ -284,12 +293,14 @@
                 border-left: 5px solid #2a5298 !important;
                 box-shadow: none !important;
                 page-break-inside: avoid;
+                break-inside: avoid;
             }
             .tech-box {
                 background: white !important;
                 color: black !important;
                 border: 1px solid #ddd !important;
                 page-break-inside: avoid;
+                break-inside: avoid;
             }
             .tech-box h3 {
                 color: black !important;
@@ -300,6 +311,7 @@
                 border: 1px solid #ddd !important;
                 border-left: 5px solid !important;
                 page-break-inside: avoid;
+                break-inside: avoid;
             }
             .problem-statement {
                 border-left-color: #dc3545 !important;
@@ -311,6 +323,11 @@
                 box-shadow: none !important;
                 border: 1px solid #ddd !important;
                 page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            tr {
+                page-break-inside: avoid;
+                break-inside: avoid;
             }
             th {
                 background: #f2f2f2 !important;
@@ -325,6 +342,8 @@
                 color: black !important;
                 border-top: 1px solid #ddd;
                 padding: 20px 0 !important;
+                page-break-inside: avoid;
+                break-inside: avoid;
             }
         }
     </style>
