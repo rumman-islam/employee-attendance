@@ -264,22 +264,38 @@
             header {
                 background: white !important;
                 color: black !important;
-                border-bottom: 2px solid #333;
-                padding: 20px 0 !important;
+                border-bottom: none !important;
+                padding: 0 !important;
                 page-break-inside: avoid;
                 break-inside: avoid;
+                page-break-after: always !important;
+                break-after: page !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                min-height: 18cm !important;
+                text-align: center !important;
             }
             header h1 {
                 color: black !important;
+                font-size: 3em !important;
+                margin-bottom: 10px !important;
             }
             header .subtitle {
                 color: #555 !important;
+                font-size: 1.5em !important;
+                margin-bottom: 20px !important;
             }
             header .student-info {
                 background: #f8f9fa !important;
                 color: black !important;
                 border: 1px solid #ddd;
                 box-shadow: none !important;
+                margin-top: 2cm !important;
+                text-align: left !important;
+                padding: 20px 40px !important;
+                border-radius: 10px !important;
             }
             h2, h3 {
                 color: black !important;
